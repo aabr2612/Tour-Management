@@ -1,0 +1,168 @@
+.table-heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    text-align: left;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+  }
+  
+  .delete-btn {
+    background-color: #e74c3c;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  .loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loading-text {
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .error__msg {
+    color: red;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .table-heading {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  
+    .table thead {
+      display: none;
+    }
+  
+    .table, 
+    .table tbody, 
+    .table tr, 
+    .table td {
+      display: block;
+      width: 100%;
+    }
+  
+    .table tr {
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .table td {
+      text-align: left;
+      padding: 10px 15px;
+      position: relative;
+      border: none;
+      border-bottom: 1px solid #eee;
+      font-size: 16px;
+      color: #333;
+    }
+  
+    .table td:last-child {
+      border-bottom: 0;
+    }
+  
+    .table td::before {
+      content: attr(data-label);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #3498db;
+      position: absolute;
+      left: 15px;
+      top: 10px;
+    }
+  
+    .table td + td {
+      margin-top: 15px;
+    }
+  
+    .table td:first-child {
+      padding-top: 20px;
+    }
+  
+    .table td:last-child {
+      padding-bottom: 20px;
+    }
+  }
+  /* Override styles for striped rows */
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: #ffffff !important; /* Set to your desired background color */
+    color: #000000 !important; /* Set to your desired text color */
+    --bs-table-accent-bg: #ffffff !important;
+  }
+  
+
+  /* General styles for the message container */
+.custom-message {
+    position: fixed;
+    top: 30px; 
+    right: 20px; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #f8d7da; 
+    color: #721c24; 
+    font-size: 16px;
+    font-weight: bold;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0; 
+    visibility: hidden;
+    z-index: 9999; 
+  }
+  
+  /* Show the message */
+  .custom-message.show {
+    opacity: 1; 
+    visibility: visible; 
+  }
+  
+
+  .custom-message.success {
+    background-color: #e01c1c; 
+    color: #ffffff; 
+  }
+  
+  .custom-message.error {
+    background-color: #f8d7da; /* Light red background for error messages */
+    color: #721c24; /* Dark red text color */
+  }
+  

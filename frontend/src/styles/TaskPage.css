@@ -1,0 +1,67 @@
+.task-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden; /* Hide content that is outside the container during transition */
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+  }
+  
+  .task-form-container.open {
+    max-height: 500px; /* Adjust this to a value large enough for your form's height */
+    opacity: 1;
+  }
+  
+  .task-form {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Fixed width */
+  }
+  
+  .task-form label {
+    margin-top: 10px;
+  }
+  
+  .task-form button {
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .task-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .task-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .task-card h5 {
+    margin: 0;
+  }
+  
+  .task-card p {
+    color: #555;
+    margin-bottom: 0;
+  }
+  
+  .task-card button {
+    margin-left: 10px;
+  }
+  
